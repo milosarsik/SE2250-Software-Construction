@@ -4,19 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class SphereMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
+    // variables
     public Text scoreText;
-
     public float sphereSpeed;
-    private int score;
+    private int _score;
 
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
-        setScoreText();
-        
+        _score = 0;
+        SetScoreText();
     }
 
     // Update is called once per frame
@@ -32,27 +31,28 @@ public class SphereMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        // comparing the tags
         if (other.gameObject.CompareTag("Blue Pick Up"))
         {
             other.gameObject.SetActive(false);
 
-            score += 5;
+            _score += 100;
 
-            setScoreText();
+            SetScoreText();
         }
         else
         {
             other.gameObject.SetActive(false);
 
-            score += 1;
+            _score += 50;
 
-            setScoreText();
+            SetScoreText();
         }
     }
 
-    void setScoreText()
+    void SetScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "Score: " + _score.ToString();
     }
 
 }
