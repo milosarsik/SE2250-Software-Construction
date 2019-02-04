@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RotatePickUp : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         // this will continuosly rotate our object because we are in the Update() method

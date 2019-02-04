@@ -995,8 +995,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpObject: {fileID: 6054143845807894820, guid: 12922850396691548b2a1c82881ad870,
     type: 3}
-  Mat_PickupOne: {fileID: 2100000, guid: e340a1e0791fc5e4795c1bba87f9a0ce, type: 2}
-  Mat_PickupTwo: {fileID: 2100000, guid: 34949d1c3957dff488f741f974ff232e, type: 2}
+  materialPickUpOne: {fileID: 2100000, guid: e340a1e0791fc5e4795c1bba87f9a0ce, type: 2}
+  materialPickUpTwo: {fileID: 2100000, guid: 34949d1c3957dff488f741f974ff232e, type: 2}
 --- !u!4 &1126084790
 Transform:
   m_ObjectHideFlags: 0

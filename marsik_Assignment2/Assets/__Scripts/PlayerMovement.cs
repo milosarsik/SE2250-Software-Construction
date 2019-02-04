@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
         body.AddTorque(new Vector3(xSpeed, 0, ySpeed) * sphereSpeed * Time.deltaTime);
     }
 
-
     void OnTriggerEnter(Collider other)
     {
         // comparing the tags
@@ -54,5 +53,4 @@ public class PlayerMovement : MonoBehaviour
     {
         scoreText.text = "Score: " + _score.ToString();
     }
-
 }
