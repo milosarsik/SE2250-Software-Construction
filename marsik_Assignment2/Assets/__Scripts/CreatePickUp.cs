@@ -8,10 +8,10 @@ public class CreatePickUp : MonoBehaviour
     public GameObject pickUpObject;
     public Material materialPickUpOne;
     public Material materialPickUpTwo;
-    bool isBlue = true;
+    public bool isBlue = true;
 
     // positions of the pick up objects around the box
-    Vector3[] positionArray = new[] { new Vector3(0f, 1f, 4.5f), new Vector3(3.3f, 1f, 3.2f),
+    public Vector3[] positionArray = new[] { new Vector3(0f, 1f, 4.5f), new Vector3(3.3f, 1f, 3.2f),
         new Vector3(4.5f, 1f, 0f), new Vector3(3.3f, 1f, -3.2f),new Vector3(0f, 1f, -4.5f),
         new Vector3(-3.3f, 1f, -3.2f), new Vector3(-4.5f, 1f, 0f),
         new Vector3(-3.3f, 1f, 3.2f)};
