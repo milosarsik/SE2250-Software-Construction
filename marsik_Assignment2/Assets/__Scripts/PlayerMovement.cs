@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _score = 0;
+        setScore = 0;
         SetScoreText();
     }
 
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
 
-            _score += 100;
+            setScore += 100;
 
             SetScoreText();
         }
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         {
             other.gameObject.SetActive(false);
 
-            _score += 50;
+            setScore += 50;
 
             SetScoreText();
         }
@@ -51,6 +51,20 @@ public class PlayerMovement : MonoBehaviour
 
     void SetScoreText()
     {
-        scoreText.text = "Score: " + _score.ToString();
+        scoreText.text = "Score: " + setScore.ToString();
+    }
+
+
+    public int setScore
+    {
+        get
+        {
+            return _score;
+        }
+
+        set
+        {
+            _score = value;
+        }
     }
 }
