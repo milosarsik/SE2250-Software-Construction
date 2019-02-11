@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         scoreText.text = "Score: " + setScore.ToString();
     }
 
-
+    // score property
     public int setScore
     {
         get
