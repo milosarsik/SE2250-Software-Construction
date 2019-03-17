@@ -310,4 +310,19 @@ public class Deck : MonoBehaviour {
 		card.faceUp = startFaceUp; // Use the property faceUp of Card
 	}
 
+    static public void shuffle(ref List<Card> ordered)
+    {
+        List<Card> temporary = new List<Card>();
+
+        while (ordered.Count > 0)
+        {
+            int index = Random.Range(0, ordered.Count);
+            temporary.Add(ordered[index]);
+
+            ordered.RemoveAt(index);
+        }
+
+        ordered = temporary;
+    }
+
 }
