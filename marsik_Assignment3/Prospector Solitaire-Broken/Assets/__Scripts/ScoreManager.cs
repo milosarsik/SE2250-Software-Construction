@@ -33,7 +33,7 @@ public class ScoreManager : MonoBehaviour {                 // a
 
 		// Check for a high score in PlayerPrefs
 		if (PlayerPrefs.HasKey ("ProspectorHighScore")) {
-			HIGH_SCORE = PlayerPrefs.GetInt("ProspectorHighScore");
+			//HIGH_SCORE = PlayerPrefs.GetInt("ProspectorHighScore");
 		}
 		// Add the score from last round, which will be >0 if it was a win
 		score += SCORE_FROM_PREV_ROUND;
