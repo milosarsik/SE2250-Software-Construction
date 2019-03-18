@@ -256,6 +256,7 @@ public class Prospector : MonoBehaviour {
 		// Set the depth sorting
 		cd.SetSortingLayerName(layout.discardPile.layerName);
 		cd.SetSortOrder(0);
+        Debug.Log(cd.suit + cd.rank);
 	}
 
 	// Arranges all the cards of the drawPile to show how many are left
@@ -306,8 +307,12 @@ public class Prospector : MonoBehaviour {
 				// If it's not an adjacent rank, it's not valid
 				validMatch = false;
 			}
+            if (cd.color == target.color)
+            {
+                validMatch = false;
+            }
 			if (!validMatch) return; // return if not valid
-
+            
 			// If we got here, then: Yay! It's a valid card.
 			tableau.Remove(cd); // Remove it from the tableau List
 			MoveToTarget(cd);  // Make it the target card
@@ -338,8 +343,12 @@ public class Prospector : MonoBehaviour {
 		// Check for remaining valid plays
 		foreach ( CardProspector cd in tableau ) {
 			if (AdjacentRank(cd, target)) {
-				// If there is a valid play, the game's not over
-				return;
+                // If there is a valid play, the game's not over
+                if (cd.color != target.color)
+                {
+                    return;
+                }
+               
 			}
 		}
 
